@@ -1,0 +1,145 @@
+[2025-05-30T06:28:04.188] [INFO] default - B站SESSDATA已设置
+[2025-05-30T06:28:04.203] [INFO] default - Launcher: Bot is launching...
+[2025-05-30T06:28:04.278] [DEBUG] default - Danmaku source is connected! [id=douyu, url=localhost:8002]
+[2025-05-30T06:28:04.872] [INFO] default - 已更新Telegram命令列表，共11个命令
+[2025-05-30T06:28:12.688] [ERROR] default - TypeError: callback is not a function
+    at D:\mygit\danmaqua-telegrambot\bot\bot-wrapper.js:154:21
+    at D:\mygit\danmaqua-telegrambot\node_modules\telegraf\lib\composer.js:397:28
+    at D:\mygit\danmaqua-telegrambot\node_modules\telegraf\lib\composer.js:165:111
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async execute (D:\mygit\danmaqua-telegrambot\node_modules\telegraf\lib\composer.js:518:17)
+    at async D:\mygit\danmaqua-telegrambot\node_modules\telegraf\lib\composer.js:519:21
+    at async execute (D:\mygit\danmaqua-telegrambot\node_modules\telegraf\lib\composer.js:518:17)
+    at async D:\mygit\danmaqua-telegrambot\node_modules\telegraf\lib\composer.js:519:21
+    at async execute (D:\mygit\danmaqua-telegrambot\node_modules\telegraf\lib\composer.js:518:17)
+    at async D:\mygit\danmaqua-telegrambot\node_modules\telegraf\lib\composer.js:519:21
+[2025-05-30T06:30:09.906] [ERROR] default - TypeError: callback is not a function
+    at D:\mygit\danmaqua-telegrambot\bot\bot-wrapper.js:154:21
+    at D:\mygit\danmaqua-telegrambot\node_modules\telegraf\lib\composer.js:397:28
+    at D:\mygit\danmaqua-telegrambot\node_modules\telegraf\lib\composer.js:165:111
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async execute (D:\mygit\danmaqua-telegrambot\node_modules\telegraf\lib\composer.js:518:17)
+    at async D:\mygit\danmaqua-telegrambot\node_modules\telegraf\lib\composer.js:519:21
+    at async execute (D:\mygit\danmaqua-telegrambot\node_modules\telegraf\lib\composer.js:518:17)
+    at async D:\mygit\danmaqua-telegrambot\node_modules\telegraf\lib\composer.js:519:21
+    at async execute (D:\mygit\danmaqua-telegrambot\node_modules\telegraf\lib\composer.js:518:17)
+    at async D:\mygit\danmaqua-telegrambot\node_modules\telegraf\lib\composer.js:519:21
+[2025-05-30T06:30:44.045] [ERROR] default - TypeError: callback is not a function
+    at D:\mygit\danmaqua-telegrambot\bot\bot-wrapper.js:154:21
+    at D:\mygit\danmaqua-telegrambot\node_modules\telegraf\lib\composer.js:397:28
+    at D:\mygit\danmaqua-telegrambot\node_modules\telegraf\lib\composer.js:165:111
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async execute (D:\mygit\danmaqua-telegrambot\node_modules\telegraf\lib\composer.js:518:17)
+    at async D:\mygit\danmaqua-telegrambot\node_modules\telegraf\lib\composer.js:519:21
+    at async execute (D:\mygit\danmaqua-telegrambot\node_modules\telegraf\lib\composer.js:518:17)
+    at async D:\mygit\danmaqua-telegrambot\node_modules\telegraf\lib\composer.js:519:21
+    at async execute (D:\mygit\danmaqua-telegrambot\node_modules\telegraf\lib\composer.js:518:17)
+    at async D:\mygit\danmaqua-telegrambot\node_modules\telegraf\lib\composer.js:519:21
+[2025-05-30T06:31:15.391] [ERROR] default - TypeError: callback is not a function
+    at D:\mygit\danmaqua-telegrambot\bot\bot-wrapper.js:154:21
+    at D:\mygit\danmaqua-telegrambot\node_modules\telegraf\lib\composer.js:397:28
+    at D:\mygit\danmaqua-telegrambot\node_modules\telegraf\lib\composer.js:165:111
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async execute (D:\mygit\danmaqua-telegrambot\node_modules\telegraf\lib\composer.js:518:17)
+    at async D:\mygit\danmaqua-telegrambot\node_modules\telegraf\lib\composer.js:519:21
+    at async execute (D:\mygit\danmaqua-telegrambot\node_modules\telegraf\lib\composer.js:518:17)
+    at async D:\mygit\danmaqua-telegrambot\node_modules\telegraf\lib\composer.js:519:21
+    at async execute (D:\mygit\danmaqua-telegrambot\node_modules\telegraf\lib\composer.js:518:17)
+    at async D:\mygit\danmaqua-telegrambot\node_modules\telegraf\lib\composer.js:519:21
+[2025-05-30T06:35:29.605] [INFO] access - User 6401723199 action: Registered chat id=-1002258419924 to room: bilibili 1828189761
+[2025-05-30T06:35:29.605] [DEBUG] default - User 6401723199 action: Registered chat id=-1002258419924 to room: bilibili 1828189761
+[2025-05-30T06:35:52.079] [ERROR] default - TypeError: callback is not a function
+    at D:\mygit\danmaqua-telegrambot\bot\bot-wrapper.js:154:21
+    at D:\mygit\danmaqua-telegrambot\node_modules\telegraf\lib\composer.js:397:28
+    at D:\mygit\danmaqua-telegrambot\node_modules\telegraf\lib\composer.js:165:111
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async execute (D:\mygit\danmaqua-telegrambot\node_modules\telegraf\lib\composer.js:518:17)
+    at async D:\mygit\danmaqua-telegrambot\node_modules\telegraf\lib\composer.js:519:21
+    at async execute (D:\mygit\danmaqua-telegrambot\node_modules\telegraf\lib\composer.js:518:17)
+    at async D:\mygit\danmaqua-telegrambot\node_modules\telegraf\lib\composer.js:519:21
+    at async execute (D:\mygit\danmaqua-telegrambot\node_modules\telegraf\lib\composer.js:518:17)
+    at async D:\mygit\danmaqua-telegrambot\node_modules\telegraf\lib\composer.js:519:21
+[2025-05-30T06:35:54.556] [ERROR] default - TypeError: callback is not a function
+    at D:\mygit\danmaqua-telegrambot\bot\bot-wrapper.js:154:21
+    at D:\mygit\danmaqua-telegrambot\node_modules\telegraf\lib\composer.js:397:28
+    at D:\mygit\danmaqua-telegrambot\node_modules\telegraf\lib\composer.js:165:111
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async execute (D:\mygit\danmaqua-telegrambot\node_modules\telegraf\lib\composer.js:518:17)
+    at async D:\mygit\danmaqua-telegrambot\node_modules\telegraf\lib\composer.js:519:21
+    at async execute (D:\mygit\danmaqua-telegrambot\node_modules\telegraf\lib\composer.js:518:17)
+    at async D:\mygit\danmaqua-telegrambot\node_modules\telegraf\lib\composer.js:519:21
+    at async execute (D:\mygit\danmaqua-telegrambot\node_modules\telegraf\lib\composer.js:518:17)
+    at async D:\mygit\danmaqua-telegrambot\node_modules\telegraf\lib\composer.js:519:21
+[2025-05-30T06:35:58.368] [INFO] access - User 6401723199 action: Callback received: manage_chat:-1002258419924
+[2025-05-30T06:35:58.368] [DEBUG] default - User 6401723199 action: Callback received: manage_chat:-1002258419924
+[2025-05-30T06:36:05.133] [INFO] access - User 6401723199 action: Callback received: reconnect_room:bilibili_1828189761
+[2025-05-30T06:36:05.133] [DEBUG] default - User 6401723199 action: Callback received: reconnect_room:bilibili_1828189761
+[2025-05-30T06:36:05.133] [INFO] access - User 6401723199 action: Reconnect room: bilibili 1828189761
+[2025-05-30T06:36:05.133] [DEBUG] default - User 6401723199 action: Reconnect room: bilibili 1828189761
+[2025-05-30T06:36:32.999] [INFO] access - User 6401723199 action: Callback received: manage_chat:-1002258419924
+[2025-05-30T06:36:32.999] [DEBUG] default - User 6401723199 action: Callback received: manage_chat:-1002258419924
+[2025-05-30T06:36:37.757] [INFO] access - User 6401723199 action: Callback received: reconnect_room:bilibili_1828189761
+[2025-05-30T06:36:37.757] [DEBUG] default - User 6401723199 action: Callback received: reconnect_room:bilibili_1828189761
+[2025-05-30T06:36:37.757] [INFO] access - User 6401723199 action: Reconnect room: bilibili 1828189761
+[2025-05-30T06:36:37.757] [DEBUG] default - User 6401723199 action: Reconnect room: bilibili 1828189761
+[2025-05-30T06:37:08.587] [INFO] access - User 6401723199 action: Callback received: manage_chat:-1002258419924
+[2025-05-30T06:37:08.587] [DEBUG] default - User 6401723199 action: Callback received: manage_chat:-1002258419924
+[2025-05-30T06:37:57.632] [WARN] default - Danmaku source is disconnected! [id=douyu, url=localhost:8002] Attempting to reconnect...
+[2025-05-30T06:38:59.179] [INFO] default - B站SESSDATA已设置
+[2025-05-30T06:38:59.200] [ERROR] default - 命令注册错误: command="manage_chat" 的 callback 不是函数, 实际类型: undefined
+[2025-05-30T06:38:59.202] [INFO] default - Launcher: Bot is launching...
+[2025-05-30T06:38:59.301] [DEBUG] default - Danmaku source is connected! [id=douyu, url=localhost:8002]
+[2025-05-30T06:38:59.891] [INFO] default - 已更新Telegram命令列表，共11个命令
+[2025-05-30T06:39:37.816] [INFO] access - User 6401723199 action: Callback received: manage_chat:-1002258419924
+[2025-05-30T06:39:37.816] [DEBUG] default - User 6401723199 action: Callback received: manage_chat:-1002258419924
+[2025-05-30T06:39:49.154] [INFO] access - User 6401723199 action: Callback received: reconnect_room:bilibili_1828189761
+[2025-05-30T06:39:49.154] [DEBUG] default - User 6401723199 action: Callback received: reconnect_room:bilibili_1828189761
+[2025-05-30T06:39:49.154] [INFO] access - User 6401723199 action: Reconnect room: bilibili 1828189761
+[2025-05-30T06:39:49.154] [DEBUG] default - User 6401723199 action: Reconnect room: bilibili 1828189761
+[2025-05-30T06:40:15.284] [INFO] default - B站SESSDATA已设置
+[2025-05-30T06:40:15.302] [ERROR] default - 命令注册错误: command="manage_chat" 的 callback 不是函数, 实际类型: undefined
+[2025-05-30T06:40:15.303] [INFO] default - Launcher: Bot is launching...
+[2025-05-30T06:40:15.377] [DEBUG] default - Danmaku source is connected! [id=douyu, url=localhost:8002]
+[2025-05-30T06:40:15.937] [INFO] default - 已更新Telegram命令列表，共11个命令
+[2025-05-30T06:40:45.398] [INFO] default - B站SESSDATA已设置
+[2025-05-30T06:40:45.419] [ERROR] default - 命令注册错误: command="manage_chat" 的 callback 不是函数, 实际类型: undefined
+[2025-05-30T06:40:45.420] [INFO] default - Launcher: Bot is launching...
+[2025-05-30T06:40:45.491] [DEBUG] default - Danmaku source is connected! [id=douyu, url=localhost:8002]
+[2025-05-30T06:40:46.084] [INFO] default - 已更新Telegram命令列表，共11个命令
+[2025-05-30T06:43:29.720] [INFO] default - B站SESSDATA已设置
+[2025-05-30T06:43:29.739] [ERROR] default - 命令注册错误: command="manage_chat" 的 callback 不是函数, 实际类型: undefined
+[2025-05-30T06:43:29.740] [INFO] default - Launcher: Bot is launching...
+[2025-05-30T06:43:29.822] [DEBUG] default - Danmaku source is connected! [id=douyu, url=localhost:8002]
+[2025-05-30T06:43:29.823] [DEBUG] default - Danmaku source is connected! [id=bilibili, url=localhost:8001]
+[2025-05-30T06:43:30.344] [INFO] default - 已更新Telegram命令列表，共11个命令
+[2025-05-30T06:43:39.172] [INFO] access - User 6401723199 action: Callback received: manage_chat:-1002258419924
+[2025-05-30T06:43:39.172] [DEBUG] default - User 6401723199 action: Callback received: manage_chat:-1002258419924
+[2025-05-30T06:43:40.906] [INFO] access - User 6401723199 action: Callback received: reconnect_room:bilibili_1828189761
+[2025-05-30T06:43:40.906] [DEBUG] default - User 6401723199 action: Callback received: reconnect_room:bilibili_1828189761
+[2025-05-30T06:43:40.907] [INFO] access - User 6401723199 action: Reconnect room: bilibili 1828189761
+[2025-05-30T06:43:40.907] [DEBUG] default - User 6401723199 action: Reconnect room: bilibili 1828189761
+[2025-05-30T06:45:36.833] [INFO] access - User 6401723199 action: Registered chat id=-1002433709001 to room: bilibili 1828189761
+[2025-05-30T06:45:36.833] [DEBUG] default - User 6401723199 action: Registered chat id=-1002433709001 to room: bilibili 1828189761
+[2025-05-30T06:49:36.548] [INFO] default - B站SESSDATA已设置
+[2025-05-30T06:49:36.562] [ERROR] default - 命令注册错误: command="manage_chat" 的 callback 不是函数, 实际类型: undefined
+[2025-05-30T06:49:36.563] [INFO] default - Launcher: Bot is launching...
+[2025-05-30T06:49:36.631] [DEBUG] default - Danmaku source is connected! [id=bilibili, url=localhost:8001]
+[2025-05-30T06:49:36.633] [DEBUG] default - Danmaku source is connected! [id=douyu, url=localhost:8002]
+[2025-05-30T06:49:37.184] [INFO] default - 已更新Telegram命令列表，共11个命令
+[2025-05-30T06:49:39.046] [DEBUG] default - 修正无效用户ID: 0 -> 780625488, 用户名: 晚***
+[2025-05-30T06:49:44.241] [DEBUG] default - 修正无效用户ID: 0 -> 878369759, 用户名: 猫***
+[2025-05-30T06:50:44.042] [DEBUG] default - 修正无效用户ID: 0 -> 620290326, 用户名: 兔***
+[2025-05-30T06:50:59.646] [DEBUG] default - 修正无效用户ID: 0 -> 679246715, 用户名: 夏***
+[2025-05-30T06:51:07.443] [DEBUG] default - 修正无效用户ID: 0 -> 698074627, 用户名: 宇***
+[2025-05-30T06:51:52.147] [INFO] default - B站SESSDATA已设置
+[2025-05-30T06:51:52.172] [ERROR] default - 命令注册错误: command="manage_chat" 的 callback 不是函数, 实际类型: undefined
+[2025-05-30T06:51:52.174] [INFO] default - Launcher: Bot is launching...
+[2025-05-30T06:51:52.265] [DEBUG] default - Danmaku source is connected! [id=bilibili, url=localhost:8001]
+[2025-05-30T06:51:52.786] [INFO] default - 已更新Telegram命令列表，共11个命令
+[2025-05-30T06:51:53.159] [DEBUG] default - Danmaku source is connected! [id=douyu, url=localhost:8002]
+[2025-05-30T06:52:07.948] [INFO] default - B站SESSDATA已设置
+[2025-05-30T06:52:07.965] [ERROR] default - 命令注册错误: command="manage_chat" 的 callback 不是函数, 实际类型: undefined
+[2025-05-30T06:52:07.966] [INFO] default - Launcher: Bot is launching...
+[2025-05-30T06:52:08.054] [DEBUG] default - Danmaku source is connected! [id=bilibili, url=localhost:8001]
+[2025-05-30T06:52:08.681] [INFO] default - 已更新Telegram命令列表，共11个命令
+[2025-05-30T06:52:09.338] [DEBUG] default - Danmaku source is connected! [id=douyu, url=localhost:8002]

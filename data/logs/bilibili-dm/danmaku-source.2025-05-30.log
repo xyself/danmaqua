@@ -1,0 +1,79 @@
+[2025-05-30T06:08:56.929] [INFO] default - Bilibili Danmaku Source initialized with SESSDATA
+[2025-05-30T06:08:56.929] [INFO] default - Reconnect task schedule at "0 0 3 * * *"
+[2025-05-30T06:08:56.934] [INFO] default - Bilibili Danmaku Source Server is listening at port 8001
+[2025-05-30T06:11:47.147] [INFO] default - Bilibili Danmaku Source initialized with SESSDATA
+[2025-05-30T06:11:47.148] [INFO] default - Reconnect task schedule at "0 0 3 * * *"
+[2025-05-30T06:11:47.153] [INFO] default - Bilibili Danmaku Source Server is listening at port 8001
+[2025-05-30T06:12:32.847] [INFO] default - Bilibili Danmaku Source initialized with SESSDATA
+[2025-05-30T06:12:32.848] [INFO] default - Reconnect task schedule at "0 0 3 * * *"
+[2025-05-30T06:12:32.853] [INFO] default - Bilibili Danmaku Source Server is listening at port 8001
+[2025-05-30T06:43:29.624] [INFO] default - Bilibili Danmaku Source initialized with SESSDATA
+[2025-05-30T06:43:29.624] [INFO] default - Reconnect task schedule at "0 0 3 * * *"
+[2025-05-30T06:43:29.629] [INFO] default - Bilibili Danmaku Source Server is listening at port 8001
+[2025-05-30T06:43:29.814] [DEBUG] default - onConnected: socket address=::1 called.
+[2025-05-30T06:43:29.830] [DEBUG] default - onJoin: roomId=1828189761 called.
+[2025-05-30T06:43:29.831] [ERROR] default - 创建房间 1828189761 弹幕客户端出错: TypeError: BLiveClient is not a constructor
+    at BilibiliDanmakuSource.createLive (D:\mygit\danmaqua-telegrambot\dmsrc\bilibili\index.js:355:26)
+    at BilibiliDanmakuSource.onJoin (D:\mygit\danmaqua-telegrambot\dmsrc\bilibili\index.js:393:28)
+    at Socket.<anonymous> (D:\mygit\danmaqua-telegrambot\dmsrc\common\index.js:63:22)
+    at Socket.emit (node:events:507:28)
+    at Socket.emitUntyped (D:\mygit\danmaqua-telegrambot\node_modules\socket.io\dist\typed-events.js:69:22)
+    at D:\mygit\danmaqua-telegrambot\node_modules\socket.io\dist\socket.js:697:39
+    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)
+[2025-05-30T06:43:29.831] [ERROR] default - TypeError: BLiveClient is not a constructor
+    at BilibiliDanmakuSource.createLive (D:\mygit\danmaqua-telegrambot\dmsrc\bilibili\index.js:355:26)
+    at BilibiliDanmakuSource.onJoin (D:\mygit\danmaqua-telegrambot\dmsrc\bilibili\index.js:393:28)
+    at Socket.<anonymous> (D:\mygit\danmaqua-telegrambot\dmsrc\common\index.js:63:22)
+    at Socket.emit (node:events:507:28)
+    at Socket.emitUntyped (D:\mygit\danmaqua-telegrambot\node_modules\socket.io\dist\typed-events.js:69:22)
+    at D:\mygit\danmaqua-telegrambot\node_modules\socket.io\dist\socket.js:697:39
+    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)
+[2025-05-30T06:43:40.907] [DEBUG] default - onReconnect: roomId=1828189761 called.
+[2025-05-30T06:45:36.833] [DEBUG] default - onJoin: roomId=1828189761 called.
+[2025-05-30T06:45:36.834] [ERROR] default - 创建房间 1828189761 弹幕客户端出错: TypeError: BLiveClient is not a constructor
+    at BilibiliDanmakuSource.createLive (D:\mygit\danmaqua-telegrambot\dmsrc\bilibili\index.js:355:26)
+    at BilibiliDanmakuSource.onJoin (D:\mygit\danmaqua-telegrambot\dmsrc\bilibili\index.js:393:28)
+    at Socket.<anonymous> (D:\mygit\danmaqua-telegrambot\dmsrc\common\index.js:63:22)
+    at Socket.emit (node:events:507:28)
+    at Socket.emitUntyped (D:\mygit\danmaqua-telegrambot\node_modules\socket.io\dist\typed-events.js:69:22)
+    at D:\mygit\danmaqua-telegrambot\node_modules\socket.io\dist\socket.js:697:39
+    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)
+[2025-05-30T06:45:36.834] [ERROR] default - TypeError: BLiveClient is not a constructor
+    at BilibiliDanmakuSource.createLive (D:\mygit\danmaqua-telegrambot\dmsrc\bilibili\index.js:355:26)
+    at BilibiliDanmakuSource.onJoin (D:\mygit\danmaqua-telegrambot\dmsrc\bilibili\index.js:393:28)
+    at Socket.<anonymous> (D:\mygit\danmaqua-telegrambot\dmsrc\common\index.js:63:22)
+    at Socket.emit (node:events:507:28)
+    at Socket.emitUntyped (D:\mygit\danmaqua-telegrambot\node_modules\socket.io\dist\typed-events.js:69:22)
+    at D:\mygit\danmaqua-telegrambot\node_modules\socket.io\dist\socket.js:697:39
+    at process.processTicksAndRejections (node:internal/process/task_queues:85:11)
+[2025-05-30T06:49:36.487] [INFO] default - Bilibili Danmaku Source initialized with SESSDATA
+[2025-05-30T06:49:36.488] [INFO] default - Reconnect task schedule at "0 0 3 * * *"
+[2025-05-30T06:49:36.492] [INFO] default - Bilibili Danmaku Source Server is listening at port 8001
+[2025-05-30T06:49:36.625] [DEBUG] default - onConnected: socket address=::1 called.
+[2025-05-30T06:49:36.637] [DEBUG] default - onJoin: roomId=1828189761 called.
+[2025-05-30T06:49:36.737] [DEBUG] default - onJoin: roomId=1828189761 called.
+[2025-05-30T06:49:37.071] [DEBUG] default - Connected to live room: 1828189761
+[2025-05-30T06:50:11.553] [DEBUG] default - [1828189761] 用户ID无效，使用用户名哈希: 紫*** -> 954634719
+[2025-05-30T06:51:23.044] [DEBUG] default - [1828189761] 用户ID无效，使用用户名哈希: 陈*** -> 1146161058
+[2025-05-30T06:51:26.948] [DEBUG] default - [1828189761] 用户ID无效，使用用户名哈希: 陈*** -> 1146161058
+[2025-05-30T06:51:29.550] [DEBUG] default - [1828189761] 用户ID无效，使用用户名哈希: V*** -> 2603732
+[2025-05-30T06:51:36.046] [DEBUG] default - [1828189761] 用户ID无效，使用用户名哈希: 紫*** -> 954634719
+[2025-05-30T06:51:47.358] [DEBUG] default - [1828189761] 用户ID无效，使用用户名哈希: 尔*** -> 702275158
+[2025-05-30T06:51:52.073] [INFO] default - Bilibili Danmaku Source initialized with SESSDATA
+[2025-05-30T06:51:52.074] [INFO] default - Reconnect task schedule at "0 0 3 * * *"
+[2025-05-30T06:51:52.079] [INFO] default - Bilibili Danmaku Source Server is listening at port 8001
+[2025-05-30T06:51:52.257] [DEBUG] default - onConnected: socket address=::1 called.
+[2025-05-30T06:51:52.266] [DEBUG] default - onJoin: roomId=1828189761 called.
+[2025-05-30T06:51:52.323] [DEBUG] default - onJoin: roomId=1828189761 called.
+[2025-05-30T06:51:52.750] [DEBUG] default - Connected to live room: 1828189761
+[2025-05-30T06:52:07.869] [INFO] default - Bilibili Danmaku Source initialized with SESSDATA
+[2025-05-30T06:52:07.869] [INFO] default - Reconnect task schedule at "0 0 3 * * *"
+[2025-05-30T06:52:07.875] [INFO] default - Bilibili Danmaku Source Server is listening at port 8001
+[2025-05-30T06:52:08.047] [DEBUG] default - onConnected: socket address=::1 called.
+[2025-05-30T06:52:08.056] [DEBUG] default - onJoin: roomId=1828189761 called.
+[2025-05-30T06:52:08.117] [DEBUG] default - onJoin: roomId=1828189761 called.
+[2025-05-30T06:52:08.615] [DEBUG] default - Connected to live room: 1828189761
+[2025-05-30T06:54:27.851] [DEBUG] default - [1828189761] 系统通知: <%美洲大蠊丿%>投喂<%果酱酱Overdose%>1个浪漫城堡，点击前往TA的房间吧！
+[2025-05-30T07:00:09.947] [DEBUG] default - [1828189761] 系统通知: 恭喜主播<%尤可Yuki%>荣获上小时人气榜第<%1%>名！点击传送查看精彩内容！
+[2025-05-30T07:02:04.078] [DEBUG] default - [1828189761] 系统通知: <%鹤歸雾中%>投喂<%Cg-李星云-雾雾%>1个浪漫城堡，点击前往TA的房间吧！
+[2025-05-30T07:02:28.799] [DEBUG] default - [1828189761] 系统通知: <%花鸟风月_Sora%>投喂<%纯饿糖怪-冰糕_哆啦冠%>1个浪漫城堡，点击前往TA的房间吧！
