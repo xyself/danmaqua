@@ -2,10 +2,10 @@ name: 构建并推送Docker镜像
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "main" ]
     tags: [ 'v*' ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "main" ]
   workflow_dispatch: {}   # 添加手动触发
 
 env:
