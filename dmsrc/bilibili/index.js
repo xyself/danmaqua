@@ -12,6 +12,31 @@ function delay(ms) {
 }
 
 class DanmakuHandler extends BaseHandler {
+    // 不处理系统通知消息
+    _on_notice_msg(client, message) {
+        // pass
+    }
+    // 只允许处理的command类型白名单
+    static allowedCommands = [
+        'DANMU_MSG',
+        'SEND_GIFT',
+        'GUARD_BUY',
+        'SUPER_CHAT_MESSAGE',
+        'INTERACT_WORD',
+        'LIKE_CLICK',
+    ];
+
+    // 总入口，白名单过滤，未处理类型不做任何输出
+    handleCommand(command, client, message) {
+        if (!DanmakuHandler.allowedCommands.includes(command)) {
+            // 彻底静默，未处理类型不输出
+            return;
+        }
+        const method = this[`_on_${command.toLowerCase()}`];
+        if (typeof method === 'function') {
+            method.call(this, client, message);
+        }
+    }
     constructor(source, roomId) {
         super();
         this.source = source;
@@ -34,23 +59,18 @@ class DanmakuHandler extends BaseHandler {
         try {
             // 移除冗长的原始弹幕消息日志
             // console.log("原始弹幕消息:", JSON.stringify(message, null, 2));
-            
+
             const dmSenderUid = message.uid || 0;
             let dmSenderUsername = message.uname || '匿名用户';
             const dmSenderUrl = 'https://space.bilibili.com/' + dmSenderUid;
             const dmText = message.msg;
             const dmTimestamp = Math.floor(Date.now() / 1000);
-            
+
             // 简化弹幕日志格式，只输出必要信息
             console.log(`弹幕: ${dmSenderUsername}: ${dmText}`);
 
-            // 对于无效用户ID进行处理（通常是由于未登录或无权限获取用户信息）
+            // 直接使用原始uid，不再用用户名哈希
             let enhancedUid = dmSenderUid;
-            if (!enhancedUid || enhancedUid === 0) {
-                // 使用用户名哈希作为临时ID
-                enhancedUid = this._hashString(dmSenderUsername);
-                this.source.logger.debug(`[${this.roomId}] 用户ID无效，使用用户名哈希: ${dmSenderUsername} -> ${enhancedUid}`);
-            }
 
             // 添加粉丝牌信息（如果有）
             let medalInfo = '';
@@ -60,7 +80,7 @@ class DanmakuHandler extends BaseHandler {
 
             const danmaku = new Danmaku({
                 sender: {
-                    uid: enhancedUid,  // 使用增强后的UID
+                    uid: enhancedUid,  // 只用真实UID，0就是0
                     username: dmSenderUsername,
                     url: dmSenderUrl,
                     medal: medalInfo
@@ -76,16 +96,7 @@ class DanmakuHandler extends BaseHandler {
         }
     }
 
-    // 添加哈希函数，计算字符串哈希值，用于生成匿名用户的UID
-    _hashString(str) {
-        let hash = 0;
-        for (let i = 0; i < str.length; i++) {
-            const char = str.charCodeAt(i);
-            hash = ((hash << 5) - hash) + char;
-            hash = hash & hash; // 转换为32位整数
-        }
-        return Math.abs(hash);
-    }
+
 
     _on_gift(client, message) {
         try {
@@ -98,11 +109,8 @@ class DanmakuHandler extends BaseHandler {
             // 简化日志输出
             console.log(`礼物: ${dmSenderUsername} ${dmText}`);
 
-            // 对于无效用户ID进行处理
+            // 直接使用原始uid，不再用用户名哈希
             let enhancedUid = dmSenderUid;
-            if (!enhancedUid || enhancedUid === 0) {
-                enhancedUid = this._hashString(dmSenderUsername);
-            }
 
             const danmaku = new Danmaku({
                 sender: {
@@ -163,9 +171,6 @@ class DanmakuHandler extends BaseHandler {
 
             // 对于无效用户ID进行处理
             let enhancedUid = dmSenderUid;
-            if (!enhancedUid || enhancedUid === 0) {
-                enhancedUid = this._hashString(dmSenderUsername);
-            }
 
             const danmaku = new Danmaku({
                 sender: {
@@ -260,21 +265,13 @@ class DanmakuHandler extends BaseHandler {
         }
     }
 
-    // 处理系统通知消息（礼物、活动等），但不转发
-    _on_notice_msg(client, message) {
-        try {
-            // 记录日志但不转发
-            this.source.logger.debug(`[${this.roomId}] 系统通知: ${message.msg_common || message.msg_self || JSON.stringify(message)}`);
-        } catch (e) {
-            this.source.logger.error(`Error processing bilibili notice for room ${this.roomId}: ${e.message}`, e);
-        }
-    }
+
     
     // 处理系统消息，但不转发
 /*     _on_sys_msg(client, message) {
         try {
             // 记录日志但不转发
-            this.source.logger.debug(`[${this.roomId}] 系统消息: ${message.msg || JSON.stringify(message)}`);
+            // this.source.logger.debug(`[${this.roomId}] 系统消息: ${message.msg || JSON.stringify(message)}`);
         } catch (e) {
             this.source.logger.error(`Error processing bilibili system message for room ${this.roomId}: ${e.message}`, e);
         }
@@ -337,7 +334,8 @@ class BilibiliDanmakuSource extends BaseDanmakuWebSocketSource {
 
     isConnected(roomId) {
         const entity = this.liveList[roomId];
-        return entity && entity.live;
+        // 需确保 client 已经启动且未断开，防止重复创建
+        return entity && entity.live && entity.live._started && !entity.live._stopped;
     }
 
     createLive(roomId) {
@@ -385,10 +383,12 @@ class BilibiliDanmakuSource extends BaseDanmakuWebSocketSource {
     onJoin(roomId) {
         super.onJoin(roomId);
         if (this.isConnected(roomId)) {
+            this.logger.debug(`[onJoin] 房间${roomId}已存在client，跳过创建`);
             this.liveList[roomId].counter++;
             return;
         }
         try {
+            this.logger.debug(`[onJoin] 创建房间${roomId} client`);
             this.liveList[roomId] = {
                 live: this.createLive(roomId),
                 counter: 1
@@ -416,38 +416,62 @@ class BilibiliDanmakuSource extends BaseDanmakuWebSocketSource {
         }
     }
 
+    // 更优的断网重连机制：每个房间独立指数退避重连
+    reconnectIntervals = {};
+    reconnectTimers = {};
+
     onReconnect(roomId) {
         super.onReconnect(roomId);
-        if (!this.isConnected(roomId)) {
-            return;
-        }
-        try {
-            const entity = this.liveList[roomId];
-            entity.live.stop();
-            entity.live = this.createLive(roomId);
-        } catch (e) {
-            this.logger.error(e);
-        }
+        if (!this.liveList[roomId]) return;
+        // 避免重复重连
+        if (this.reconnectTimers[roomId]) return;
+        this.tryReconnect(roomId);
     }
 
+    tryReconnect(roomId) {
+        const maxDelay = 60000; // 最大60秒
+        if (!this.reconnectIntervals[roomId]) this.reconnectIntervals[roomId] = 1000;
+        const delayMs = this.reconnectIntervals[roomId];
+        // 检查是否已连接
+        if (this.isConnected(roomId)) {
+            this.reconnectIntervals[roomId] = 1000; // 重置
+            if (this.reconnectTimers[roomId]) {
+                clearTimeout(this.reconnectTimers[roomId]);
+                delete this.reconnectTimers[roomId];
+            }
+            return;
+        }
+        this.logger.warn(`房间${roomId}断开，${delayMs/1000}s后重连`);
+        this.reconnectTimers[roomId] = setTimeout(async () => {
+            try {
+                if (this.liveList[roomId] && this.liveList[roomId].live) {
+                    this.liveList[roomId].live.stop();
+                }
+                this.liveList[roomId].live = this.createLive(roomId);
+                this.reconnectIntervals[roomId] = 1000; // 重连成功重置
+                clearTimeout(this.reconnectTimers[roomId]);
+                delete this.reconnectTimers[roomId];
+                this.logger.info(`房间${roomId}重连成功`);
+            } catch (e) {
+                this.logger.error(`重连房间${roomId}失败: ${e.message}`);
+                // 指数退避
+                this.reconnectIntervals[roomId] = Math.min(delayMs * 2, maxDelay);
+                this.tryReconnect(roomId);
+            }
+        }, delayMs);
+    }
+
+    // 批量重连时直接触发所有房间的独立重连
     batchReconnect = async () => {
         this.logger.debug('Start batch reconnect task');
         for (let roomId of Object.keys(this.liveList)) {
             this.onReconnect(Number(roomId));
-            await delay(BATCH_RECONNECT_DELAY);
         }
     }
 }
 
 const roomId = process.argv[2];
-if (roomId) {
-    // 单房间模式
-    // 只监听 roomId
-} else {
-    // 服务模式
-    // 由 bot 控制 joinRoom/leaveRoom
-}
-
+// 统一服务模式
 const src = new BilibiliDanmakuSource(bilibiliConfig);
 src.listen();
 src.logger.info('Bilibili Danmaku Source Server is listening at port ' + src.port);
