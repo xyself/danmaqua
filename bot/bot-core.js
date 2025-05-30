@@ -73,18 +73,10 @@ class DanmaquaBot extends BotWrapper {
             {
                 command: 'manage_chats',
                 title: '管理频道',
-                description: '列出已经绑定了弹幕转发的频道，并进行选择管理',
-                help: '使用方法：/manage\\_chats',
+                description: '列出所有已绑定的频道，选择一个进行管理',
+                help: '使用方法：/manage_chats',
                 botAdminOnly: false,
                 callback: this.onCommandManageChats
-            },
-            {
-                command: 'manage_chat',
-                title: '管理指定的频道',
-                description: '管理指定的已绑定弹幕转发的频道',
-                help: '使用方法：/manage\\_chat \\[频道ID]',
-                botAdminOnly: false,
-                callback: this.onCommandManageChat
             },
             {
                 command: 'set_default_admins',
