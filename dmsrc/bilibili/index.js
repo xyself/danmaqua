@@ -271,14 +271,14 @@ class DanmakuHandler extends BaseHandler {
     }
     
     // 处理系统消息，但不转发
-    _on_sys_msg(client, message) {
+/*     _on_sys_msg(client, message) {
         try {
             // 记录日志但不转发
             this.source.logger.debug(`[${this.roomId}] 系统消息: ${message.msg || JSON.stringify(message)}`);
         } catch (e) {
             this.source.logger.error(`Error processing bilibili system message for room ${this.roomId}: ${e.message}`, e);
         }
-    }
+    } */
 }
 
 class BilibiliDanmakuSource extends BaseDanmakuWebSocketSource {
