@@ -22,7 +22,7 @@ class DanmakuHandler extends BaseHandler {
         'SEND_GIFT',
         'GUARD_BUY',
         'SUPER_CHAT_MESSAGE',
-        'INTERACT_WORD',
+        'INTERACT_WORD_V2',
         'LIKE_CLICK',
     ];
 
