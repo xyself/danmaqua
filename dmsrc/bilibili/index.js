@@ -362,11 +362,23 @@ class BilibiliDanmakuSource extends BaseDanmakuWebSocketSource {
             handler.on_client_stop = (client) => {
                 this.logger.debug(`Disconnected from live room: ${roomId}`);
                 console.log(`房间 ${roomId} 客户端已断开连接`);
+                try {
+                    // 触发重连逻辑（如果该房间仍在使用中）
+                    this.onReconnect(roomId);
+                } catch (e) {
+                    this.logger.error(`on_client_stop trigger onReconnect failed for room ${roomId}: ${e && e.message}`);
+                }
             };
             
             handler._on_error = (client, error) => {
                 this.logger.error(`BilibiliDanmakuSource roomId=${roomId} error:`, error);
                 console.error(`房间 ${roomId} 客户端错误:`, error);
+                try {
+                    // 出错时也尝试触发重连，交由指数退避处理
+                    this.onReconnect(roomId);
+                } catch (e) {
+                    this.logger.error(`_on_error trigger onReconnect failed for room ${roomId}: ${e && e.message}`);
+                }
             };
             
             live.set_handler(handler);
